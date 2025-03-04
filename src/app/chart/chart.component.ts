@@ -8,13 +8,7 @@ import { chartData } from './datasource';
   selector: 'app-chart',
   standalone: true,
   imports: [ChartAllModule, StockChartAllModule],
-  providers: [
-    DateTimeService,
-    LegendService,
-    TooltipService,
-    DataLabelService,
-    CandleSeriesService
-  ],
+  
 
   templateUrl: './chart.component.html',
   styleUrl: './chart.component.scss'
