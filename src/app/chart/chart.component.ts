@@ -3,11 +3,11 @@ import { ChartAllModule, StockChartAllModule } from '@syncfusion/ej2-angular-cha
 import { DateTimeService, LegendService, TooltipService } from '@syncfusion/ej2-angular-charts';
 import { DataLabelService, CandleSeriesService } from '@syncfusion/ej2-angular-charts';
 import { chartData } from './datasource';
-
+import { CardModule } from 'primeng/card';
 @Component({
   selector: 'app-chart',
   standalone: true,
-  imports: [ChartAllModule, StockChartAllModule],
+  imports: [ChartAllModule, StockChartAllModule,CardModule],
   
 
   templateUrl: './chart.component.html',
@@ -19,6 +19,7 @@ export class ChartComponent implements OnInit {
   public primaryXAxis?: Object;
   public primaryYAxis?: Object;
   public crosshair?: Object;
+  theme?: string;
   constructor() {
     console.log('ChartComponent initialized!');
     this.primaryXAxis = {
@@ -32,6 +33,7 @@ export class ChartComponent implements OnInit {
       this.crosshair = {
       enable: true
     };
+    this.theme = 'fabric';
   }
 
   ngOnInit(): void {
